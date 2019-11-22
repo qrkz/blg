@@ -1,0 +1,152 @@
+*{
+    font-family: 'Ubuntu', -apple-system,'Ubuntu', sans-serif;
+}
+body{
+    margin:0;padding: 0;
+    height: 100vh;width: 100vw; color: #ddd;
+    font-family: 'Ubuntu', -apple-system,'Ubuntu', sans-serif;
+}
+#vjPage{
+    position: relative;
+    z-index: 1;
+    height: 100vh; width: 100vw;
+    margin:0;padding:0;
+    display: grid;
+    grid-template-columns: 20vw 60vw 20vw;
+    grid-template-rows: 40px auto 40px;
+    grid-template-areas:"HL HC HR" "M M M" "FL FC FR";
+    background: transparent;
+}
+#vjPage:before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100vw;height: 100vh;
+    position: fixed;top: 0; left: 0;
+    background-image: url('/logo.png');
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    background-size: 30vh;
+    opacity: 0.08;
+}
+#vjPage a.vjH,#vjPage a.vjF{
+    display: flex;align-items: center;justify-content: center;
+    text-decoration: none; color:aqua;background: #000
+}
+#vjPage a.vjH:hover,#vjPage a.vjF:hover{
+    text-decoration: none; color:#000; background: aqua;
+}
+.vjH{
+    box-shadow: inset #ddd 0px -1px;
+}
+.vjF{
+    box-shadow: inset #ddd 0px 1px;
+}
+#vjBody{
+    grid-area: M; min-width: 0; padding: 0;
+    background:transparent;
+    overflow: hidden;
+    color: #ddd; font-size: 0.8rem;
+/*  display: grid;
+    grid-template-columns: minmax(25%, 50%) minmax(25%, 50%) minmax(25%, 50%) minmax(25%, 50%) minmax(25%, 50%) minmax(25%, 50%);
+    grid-gap: 2vmin;*/
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+}
+canvas {
+    display: block;
+    vertical-align: bottom;
+  } /* ---- particles.js container ---- */
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #b61924;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+.vjvjPageGallery .swiper-wrapper{
+    height: calc(100vh - 120px);
+}
+.vjvjPageGallery .swiper-slide{
+    width: 100%;
+    height: calc(100vh - 160px);
+    background: transparent;
+    display: flex;flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.vjvjPageGallery .swiper-slide::-webkit-scrollbar{
+    width: 8px;
+    border-radius: 4px;
+}
+.vjvjPageGallery .swiper-slide::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 12px rgba(0,0,0,0.8);
+}
+
+.vjvjPageGallery .swiper-slide::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-image: linear-gradient(to right bottom, aqua, dodgerblue);
+}
+.vjTabsGallery{
+    cursor: pointer;
+    background: #111;
+    box-shadow: inset aqua 0 -1px;
+}
+.vjTabsGallery .swiper-wrapper{
+    height: 35px;padding-top: 5px;
+    display: flex;flex-direction: row;
+}
+.vjTabsGallery .swiper-slide{
+    height:30px;background:transparent; color: #ddd;
+    display: flex;align-items: center;justify-content: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+.vjTabsGallery .swiper-slide:hover{
+    background: mediumaquamarine; font-weight: bold;color: black;
+}
+.vjTabsGallery .swiper-slide.swiper-slide-thumb-active{
+    background: aqua; font-weight: bold;color: black;
+}
+.vjvjPageGallery .swiper-pagination-fraction{
+    bottom:0px;height: 40px;
+    display: flex;align-items: center;justify-content: center;
+    color:aqua;
+    background: #222;
+    box-shadow: inset aqua 0px 2px;
+}
+.vjvjPageGallery .swiper-button-next,.vjvjPageGallery .swiper-button-prev{
+    width: 20vw; height: 40px; background: transparent;
+    top: calc(100vh - 137px);
+    color: aqua;
+}
+.vjvjPageGallery .swiper-button-next{right:0}
+.vjvjPageGallery .swiper-button-prev{left:0}
+.vjvjPageGallery .swiper-button-next::after,.vjvjPageGallery .swiper-button-prev::after{
+    font-size: 15px;
+}
+.vjvjPageGallery .swiper-button-next:hover,.vjvjPageGallery .swiper-button-prev:hover{background: #111;box-shadow: inset aqua 0 1px}
+h1{
+    font-family: 'Ubuntu', sans-serif;
+    color: aqua;
+}
+.vjSlidevjPage > div{
+    padding-left:10px
+}
+.vjSlidevjPage{
+    min-height: calc(100vh - 160px);
+    display: flex;flex-direction: column;
+    justify-content: space-between;
+    padding: 0;margin:0;
+}

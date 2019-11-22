@@ -1,0 +1,260 @@
+body{
+    margin: 0; padding: 0;
+    height: 100%; width: 100%;
+}
+#mainGrid{
+    display: flex;
+    flex-direction: column;
+    width: 100%; left: 0;
+}
+#mainGrid::before{
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url(../logo.png);
+    background-position: 50% 70%;
+    background-repeat: no-repeat;
+    background-size: auto 70vh;
+    opacity: 0.1;
+    z-index:3;
+}
+#vjBanner{
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: flex-end;
+    height: calc(100vh - 80px);
+    color: #ddd; z-index: 5;
+    box-shadow: inset yellow 2vw 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9),  rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+.aniText{
+    background: -webkit-linear-gradient(0deg, orange, yellow, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.aniText:hover{
+    background: -webkit-linear-gradient(left, #4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+    background-size: 1600px 200px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-name: animationgradienttitle;
+    animation-name: animationgradienttitle;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}@-webkit-keyframes animationgradienttitle {
+    0% {
+      background-position: 0 1600px;
+    }
+    100% {
+      background-position: 1600px 0;
+    }
+  }
+  @keyframes animationgradienttitle {
+    0% {
+      background-position: 0 1600px;
+    }
+    100% {
+      background-position: 1600px 0;
+    }
+  }
+.aniArrow{
+    animation: sk-bounce 2.0s infinite cubic-bezier(1, 0, 0.7, 1);
+}
+@-webkit-keyframes sk-bounce {
+    0%,
+    100%    {-webkit-transform: translateY(-40px)}
+    50%     {-webkit-transform: translateY(-0px)}
+}
+#vjHead{
+    position: sticky;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: inset yellow 2vw 0;
+    z-index: 555;
+}
+#vjFoot{
+    position: fixed;
+    bottom: 0; left: 0;
+    box-shadow: inset yellow 2vw 0, inset #ff0 0 2px;
+    z-index: 555;
+}
+#vjHead a, #vjFoot a{
+    height: 40px;
+    display: flex;
+    align-items: center; justify-content: center;
+    color: yellow;
+    text-decoration: none;
+}
+#vjHead a:hover, #vjFoot a:hover,#vjHead a:focus, #vjFoot a:focus{
+    text-decoration: none;
+    color: black;
+    background: #ff0;
+}
+.vjHFB{
+    width: calc(2vw + 40px);
+}
+.vjHFB:first-of-type{
+    padding-left: 2vw;
+}
+.vjHFC{
+    width: calc(96vw - 80px);
+}
+#vjPage{
+    color:#ddd;
+    font-size: 0.9rem;
+    background: transparent;
+    z-index: 5;
+}
+.vjPagePadding{
+    height: calc(100vh - 123px);display: flex;
+    box-shadow: inset yellow 2vw 0;
+}
+canvas{
+    top: 0; left: 0;
+    position: fixed;
+    background-image: linear-gradient(to top left, indigo 0%, rebeccapurple 100%);
+}
+.vjContentHeading{
+    display: flex; align-items: center; justify-content: flex-start;
+    font-size: 1.3rem;
+    padding-left: 4vw;height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    position: sticky; color: #fff;
+    top:40px;z-index: 20;
+    backdrop-filter: blur(2px);
+    box-shadow: inset #ff0 2vw 0, inset #ff0 0 -2px;
+}
+.vjContentSectionContent{
+    box-shadow: inset #ff0 2vw 0;
+    padding: 40px 2vw 50px 4vw;
+    z-index: 6;
+}
+.vjContentHeading:hover{
+  color: black;
+  background: #ff0;
+  text-decoration: none;
+}
+.vjContentHeading i:nth-of-type(2){
+    margin-left: auto; padding-right: 4vw;
+}
+.vjGlass{
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+.vjGlassDark{
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+.vjGlassDark:hover{
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow: #ff0 10px 10px 0;
+}
+.vjGlassDarkest{
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+.vjRadius{
+    border-radius: 10px;
+}
+body::-webkit-scrollbar{
+    width: 8px;
+}
+body::-webkit-scrollbar-track{
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(to top right, orange, #ff0);
+}
+.vjULtn{
+    padding-bottom: 0.2rem;
+    box-shadow: #ff0 0 2px;
+}
+.vjULtk{
+    padding-bottom: 0.2rem;
+    box-shadow: #ff0 0 4px;
+}
+.vjULtn:hover{
+    padding-bottom: 0.2rem;
+    color: #ff0;
+    box-shadow: #ff0 0 2px;
+}
+.vjULtk:hover{
+    padding-bottom: 0.2rem;
+    color: #ff0;
+    box-shadow: #ff0 0 4px;
+}
+.vjFlex{
+    display: flex;
+    width: 100%;
+}
+.vjSticky{
+    position: sticky!important;
+    top:0px!important;
+}
+.vjScroll{
+    padding: 0;margin: 0;
+    height: 70vh;
+    overflow: scroll;
+}
+.vjScroll::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+}
+.vjScroll::-webkit-scrollbar-track{
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+.vjScroll::-webkit-scrollbar-thumb{
+    background: linear-gradient(to top right, orange, #ff0);
+}
+.vjScroll::-webkit-scrollbar-corner{
+    background: black;
+}
+.vjTable{
+    display: flex;width: 100%;height: calc(100vh - 200px);
+    flex-direction: column;
+    overflow: scroll;
+    background: rgba(0, 0, 0, 0.6);
+}
+.vjTable tr{
+    padding: 1.5rem 0;
+}
+.vjTable tr:nth-of-type(odd){
+    background: rgba(255, 255, 255, 0.2);
+}
+.vjTable tr:nth-of-type(odd){
+    background: rgba(150, 150, 150, 0.2);
+}
+.vjColumnFixed tr td:first-of-type{
+    position: sticky;left:0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+.vjRowFixed tr:first-of-type{
+    padding: 1rem;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.9);
+    color: #ff0;
+    z-index: 2;
+}
+.vjTable tbody td{
+    padding: 0.5rem;
+    text-align: center;
+}

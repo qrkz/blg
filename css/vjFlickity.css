@@ -1,0 +1,136 @@
+body{
+    margin:0;padding: 0;
+    background: #222;
+    height: 100vh;width: 100vw;
+}
+#page{
+    height: 100vh; width: 100vw;
+    margin:0;padding:0;
+    background-image: url('/logo.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 30vh;
+    display: grid;
+    grid-template-columns: 20vw 60vw 20vw;
+    grid-template-rows: 40px auto 40px;
+    grid-template-areas:"HL HC HR" "M M M" "FL FC FR";
+}
+#page > a{
+    display: flex;align-items: center;justify-content: center;
+    text-decoration: none; color:aqua;background: #000
+}
+#page > a:hover{
+    text-decoration: none; color:#000; background: aqua;
+}
+.vjH{
+    box-shadow: inset aqua 0px -2px;
+}
+.vjF{
+    box-shadow: inset aqua 0px 2px;
+}
+#vjBody{
+    grid-area: M; min-width: 0; padding: 0;
+    background:rgba(34,34,34,0.95); color: #ddd; font-size: 0.8rem;
+    overflow: hidden;
+/*  display: grid;
+    grid-template-columns: minmax(25%, 50%) minmax(25%, 50%) minmax(25%, 50%) minmax(25%, 50%) minmax(25%, 50%) minmax(25%, 50%);
+    grid-gap: 2vmin;*/
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+}
+#vjTabContainer{
+    display: flex;flex-direction: column;
+    margin: 0; padding: 0;
+    width: 100%;height: 100%;
+    /*box-shadow: inset red 2px 2px, inset red -2px -2px;*/
+    background: transparent;
+}
+#vjTabsBar{
+    height: 40px;
+    padding-top: 5px;
+    background:transparent;
+}
+#vjTabsBar .vjTab{
+    color: #ddd;
+    display: flex;align-items: center; justify-content: center;
+    height: 30px;width: fit-content;
+    padding: 0 10px;
+    border-radius: 15px;
+    border: #ddd solid 1px;
+    margin-right: 5px;
+}
+#vjTabsBar .vjTab:hover{
+    background: rgba(34,34,34,0.95);
+}
+#vjTabsBar .vjTab.is-nav-selected{
+    color:aqua;
+    border: aqua solid 0px;
+    background: rgba(0, 255, 255, 0.2);
+}
+#vjTabContents{
+    height: calc(100vh - 120px);
+    padding: 0;margin: 0;
+    overflow-x: hidden;
+    cursor: default!important;
+}
+#vjTabContents .vjContent{
+    width: 100%; height: calc(100vh - 120px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0;margin:0;
+    cursor: pointer!important;
+}
+#vjTabContents .vjContent::-webkit-scrollbar{
+    width: 8px;
+}
+#vjTabContents .vjContent::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 12px rgba(0,0,0,0.8);
+}
+
+#vjTabContents .vjContent::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-image: linear-gradient(to right top, aqua, dodgerblue);
+}
+.vjContentSlide{
+    width: 100%;
+    height: 20vh;
+    background: #444;
+    padding: 2vw;
+}
+.vjContentBannerSlide{
+    display: flex; align-items: center; justify-content: center;
+    width: 70vw; height: 100%;
+    border-radius: 5px;
+    margin-right:10px;
+    background: seagreen;
+}
+.flickity-page-dots {
+    bottom: -18px;
+}
+.flickity-page-dots .dot {
+    background: #ccc;
+    width: 8px;height: 8px;
+}
+.flickity-page-dots .dot.is-selected {
+    background: aqua;
+}
+.vjContent .vjContentSlide .flickity-prev-next-button {
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.vjContent .vjContentSlide .flickity-prev-next-button.next {
+    right: 2px;
+}
+.vjContent .vjContentSlide .flickity-prev-next-button.previous {
+    left: 2px;
+}
